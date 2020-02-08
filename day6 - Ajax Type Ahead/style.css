@@ -1,7 +1,8 @@
 html {
   box-sizing: border-box;
-  background: url("./images/background1.jpg");
-  background-size: cover;
+  background-image: url("./images/background1.jpg");
+  background-size: contain;
+  background-attachment: fixed;
   font-family: "helvetica neue";
   font-size: 20px;
   font-weight: 200;
