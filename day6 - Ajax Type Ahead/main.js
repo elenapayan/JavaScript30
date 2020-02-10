@@ -9,11 +9,14 @@ fetch(endpoint)
   .then(data => cities.push(...data));
 
 function findMatches(wordToMatch, cities) {
-  return cities.filter(place => {
-    const regex = new RegExp(wordToMatch, "gi");
-    return place.city.match(regex) || place.state.match(regex)
-  });
-
+  if (wordToMatch) {
+    return cities.filter(place => {
+      const regex = new RegExp(wordToMatch, "gi");
+      return place.city.match(regex) || place.state.match(regex)
+    });
+  } else {
+    return [];
+  }
 }
 
 function numberWithCommas(x) {
